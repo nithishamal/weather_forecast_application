@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Application</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
+    <header class="text-center dark:text-white p-2 bg-gradient-to-r from-blue-400 to-purple-600 shadow-md w-full">
+        <Span class="text-4xl font-bold center">Weather Forecast Application</Span>     
+    </header>
+    <section class="bg-gradient-to-r from-blue-400 to-purple-600 flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-4xl p-5 bg-white shadow-lg rounded-lg">
+            <h1 class="text-2xl font-bold text-center text-white bg-gradient-to-r from-blue-400 to-purple-600 py-3 rounded-lg">Weather Dashboard</h1>
+    
+            <!-- Search Section -->
+            <div class="mt-4 flex items-center gap-3">
+                <select id="recentSearches" class="w-full p-2 border rounded-lg hidden">
+                    <option value="">Recent Searches</option>
+                </select>
+                <input id="cityInput" type="text" placeholder="Enter city name..."
+                    class="w-full p-2 border rounded-lg focus:outline-none">
+                <button id="search_Btn" class="bg-blue-400 w-24 font-bold text-white h-12 px-4 py-2 rounded-lg shadow-md">Search</button>
+                <span class="font-bold">Or</span>
+                <button id="locationBtn" class="bg-purple-600 w-80 font-bold text-white h-12 px-4 py-2 rounded-lg shadow-md">Use Current Location</button>
+            </div>
+
+            <!-- Recent Searches Dropdown -->
+            <div class="mt-4">
+                
+            </div>
+    
+            <!-- Current Weather Section -->
+            <div id="currentWeather" class="mt-6 bg-blue-200 p-4 rounded-lg hidden">
+                <h2 class="text-xl font-semibold" id="cityName"></h2>
+                <p id="weatherDesc" class="text-lg"></p>
+                <p>🌡️ <span id="temperature"></span>°C</p>
+                <p>💨 Wind: <span id="windSpeed"></span> m/s</p>
+                <p>💧 Humidity: <span id="humidity"></span>%</p>
+            </div>
+    
+            <!-- 5-Day Forecast -->
+            <h3 class="text-xl font-semibold mt-6">5-Day Forecast</h3>
+            <div id="forecastContainer" class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-3"></div>
+    
+            
+        </div>
+        
+    </section>
+    
+</body>
+</html>
